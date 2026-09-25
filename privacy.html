@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Piko handles parent and child information, AI features, controls, and deletion.">
+  <title>Privacy | Piko</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --cream: #f6f1e7;
+      --paper: #fffdf8;
+      --ink: #26332d;
+      --muted: #66736a;
+      --line: #e3dccd;
+      --sage: #496a58;
+      --peach: #e6b38b;
+      --serif: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--cream); color: var(--ink); font: 16px/1.72 var(--sans); }
+    a { color: var(--sage); text-underline-offset: .18em; }
+    a:hover { color: #2e4d3c; }
+    .wrap { width: min(100% - 36px, 900px); margin: 0 auto; }
+    header { padding: 28px 0 20px; }
+    .top { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { color: var(--ink); font: 700 25px/1 var(--serif); letter-spacing: -.04em; text-decoration: none; }
+    .brand span { color: var(--sage); }
+    nav { display: flex; flex-wrap: wrap; gap: 18px; font-size: 14px; }
+    nav a { color: var(--muted); text-decoration: none; }
+    .hero { padding: 46px 0 28px; }
+    .eyebrow { color: var(--sage); font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -.025em; line-height: 1.2; }
+    h1 { max-width: 720px; margin: 12px 0 15px; font-size: clamp(42px, 8vw, 66px); }
+    h2 { margin: 0 0 12px; font-size: clamp(25px, 4vw, 32px); }
+    h3 { margin: 24px 0 7px; font-size: 21px; }
+    .lede { max-width: 660px; color: var(--muted); font-size: 18px; }
+    .updated { color: var(--muted); font-size: 14px; }
+    main { padding-bottom: 52px; }
+    section { margin: 18px 0; padding: clamp(23px, 5vw, 38px); background: var(--paper); border: 1px solid var(--line); border-radius: 22px; box-shadow: 0 8px 28px rgb(69 56 35 / 4%); }
+    p { margin: 10px 0; }
+    ul { margin: 9px 0 15px; padding-left: 1.25rem; }
+    li { margin: 5px 0; }
+    .note { padding: 16px 18px; background: #f4eadb; border-left: 3px solid var(--peach); border-radius: 8px; }
+    footer { padding: 22px 0 38px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+    footer .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px; }
+    @media (max-width: 600px) {
+      .top { align-items: flex-start; flex-direction: column; }
+      nav { gap: 14px; }
+      .hero { padding-top: 34px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <div class="top">
+      <a class="brand" href="index.html" aria-label="Piko home">piko<span>•</span></a>
+      <nav aria-label="Main navigation">
+        <a href="privacy.html" aria-current="page">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </div>
+    <div class="hero">
+      <div class="eyebrow">For parents and families</div>
+      <h1>Your family’s privacy, in plain language.</h1>
+      <p class="lede">This page explains what Piko handles when a parent sets up profiles for children and uses Piko’s learning, voice, story, drawing, and quiz features.</p>
+      <p class="updated"><strong>Effective date:</strong> September 26, 2026</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h2>The account belongs to a parent</h2>
+      <p>A parent or legal guardian creates and manages the Piko account. Child profiles are created under that adult account; children do not create independent Piko accounts. The parent chooses profile settings and is responsible for deciding whether a child may use Piko.</p>
+      <p>The parent account can include an email address, account identifier, and profile or family settings. If you invite another parent into a paid family plan, the invitation may use that adult’s email address. Piko also keeps account, subscription, and support-request records needed to run the service.</p>
+      <p>Questions sent through Parent Zone may include the parent’s message and any details the parent chooses to share. Parent Zone features such as Coach can also process a parent’s question and response.</p>
+    </section>
+
+    <section>
+      <h2>Information connected to a child profile</h2>
+      <p>A parent may add a child’s first name, age or age band, interests, and preferences. Settings can include response style, voice and image access, memory, transcript history, and other parent-managed guardrails.</p>
+      <p>When a child uses Piko, the service may process and save:</p>
+      <ul>
+        <li>Questions and responses, stories, quiz activity, and saved learning activity.</li>
+        <li>Voice-session details and, when transcript history is enabled, the words spoken or transcribed during a session.</li>
+        <li>Generated images and related story or voice output.</li>
+        <li>Optional memory items and safety or moderation records.</li>
+      </ul>
+      <p>Saved voice transcripts are encrypted before they are stored in Piko’s database. This describes Piko’s transcript storage; it does not describe copies a service provider may process.</p>
+      <p>Live voice is processed to provide the conversation. Piko’s current product documentation says live audio is not recorded by default. If a parent enables transcript history, the transcript can be saved for review. When Show Piko video is used, camera frames are sent for the live feature and are not stored by Piko as image uploads.</p>
+      <!-- TODO(owner): Confirm whether each live voice, video, and image route has the same storage behavior in production, including provider-side logs and backups. -->
+    </section>
+
+    <section>
+      <h2>AI features and service providers</h2>
+      <p>Piko currently uses Google Gemini and OpenRouter for AI processing. Depending on the feature and route, a request may include a question, relevant conversation context, a selected age style, or an image needed to provide the response. The route can change by feature.</p>
+      <p>We use Supabase for account services, databases, and file storage; Mixpanel for parent-consented product analytics; and RevenueCat with Apple’s App Store for subscription and purchase processing. Piko may also create moderation and safety records to help identify unsafe content or abuse.</p>
+      <p>We do not display ads to children. Piko does not send child prompts, voice, images, or child-session events to advertising platforms. A limited parent-only attribution flow is separate from a child’s activity: Apple attribution services may process an install signal, and an opaque Apple attribution token may be sent to Apple and RevenueCat. The Meta SDK is initialized only after a parent passes the Parent Zone gate and authorizes Apple’s tracking request. The tracking explanation and system prompt are shown to the parent, never to a child.</p>
+      <p>After the parent chooses analytics, Mixpanel may receive a parent account or device identifier and fixed product events such as screens, feature use, plan tier, or age style. Piko’s analytics wrapper does not include message or media content.</p>
+      <p>A picture moderation event can record the selected age style, whether an image passed or was blocked, broad reason categories, model label, processing cost, and time. The current moderation-event table does not include the image or parent account ID.</p>
+      <p>Purchases are made through Apple’s in-app purchase system. RevenueCat helps Piko check purchase status and restore access. Piko’s servers also keep subscription and purchase event records needed to maintain entitlements.</p>
+      <!-- TODO(owner): Confirm the current Google Gemini eligibility and contractual route for a child audience, OpenRouter's exact upstream providers, provider retention and training terms, and the production Meta and Mixpanel settings before App Store release. Do not add a no-training or zero-retention promise until verified. -->
+    </section>
+
+    <section>
+      <h2>Parent controls, consent, and choices</h2>
+      <p>Parents manage child profiles and can change voice, image, response-style, memory, and transcript-history settings in Parent Zone. A parent PIN or Face ID protects sensitive areas such as purchases, transcripts, exports, and deletion.</p>
+      <p>Analytics is a separate parent choice. The iOS tracking permission prompt for ad measurement is requested only in the parent area after the parent gate. A parent can decline it. Declining does not prevent a child from using learning features.</p>
+      <p>When a family uses an AI feature, the information needed to answer the request is sent to the AI provider for that feature. Parents can disable supported features in the child’s settings and can stop using Piko at any time.</p>
+      <!-- TODO(owner): Review the shipped onboarding and Parent Zone consent language, and confirm whether a separate parent acknowledgement is required before a child's first AI request. -->
+    </section>
+
+    <section>
+      <h2>How long information is kept</h2>
+      <p>Piko applies scheduled retention to several kinds of saved information:</p>
+      <ul>
+        <li>Chat messages and saved voice transcripts: up to 90 days.</li>
+        <li>Generated images: up to 180 days.</li>
+        <li>Stored story audio: up to 180 days.</li>
+        <li>A requested data-export file: up to 24 hours after it is ready.</li>
+        <li>RevenueCat purchase-event records: up to 24 months.</li>
+      </ul>
+      <p>Safety records may be kept for abuse review. The in-app deletion screen says safety events can remain for 24 months. Some encrypted safety evidence is cleared when its expiry is reached. Short-lived pairing codes expire after ten minutes and can be used once.</p>
+      <p>These periods describe Piko’s current server retention rules. They do not set the retention period of copies handled by AI, analytics, app-store, or other providers. Those periods depend on the provider route and its settings.</p>
+      <!-- TODO(owner): Verify the automated deletion period for anonymous image-moderation events, operational logs, analytics identifiers, backups, and all provider-side copies. Confirm the safety-event row lifetime against the 24-month in-app promise. -->
+    </section>
+
+    <section id="delete-account">
+      <h2>Review, export, or delete information</h2>
+      <p>Parents can review available child activity in Parent Zone, change profile settings, turn off transcript history or memory, and request an export. To remove one child profile, use Parent Zone → Privacy Center → Export and delete → Delete a child profile.</p>
+      <p><strong>To delete the parent account:</strong> open Parent Zone → Privacy Center → Export and delete → Delete my parent account. Confirm the signed-in parent email, then enter the parent PIN. The request permanently deletes the account and its child profiles and saved content, and the app signs out when deletion completes. This action cannot be undone.</p>
+      <p>Deleting your Piko account does not cancel an Apple subscription. Cancel it separately in your Apple account’s subscription settings to prevent future renewal. Some limited safety, purchase, or legally required records may need to be retained; provider copies follow the provider’s own retention rules.</p>
+      <p>See <a href="support.html#delete-account">Support: delete your account</a> for the same steps.</p>
+      <!-- TODO(owner): Confirm the backup and audit-log deletion window and the exact retention exceptions before stating a deletion completion deadline. -->
+    </section>
+
+    <section>
+      <h2>Contact and jurisdiction</h2>
+      <p>For account or privacy requests, use Parent Zone → Privacy Center in Piko. For other help, use Parent Zone → Feedback and safety report. You can also read the <a href="support.html">support page</a>.</p>
+      <!-- TODO(owner): Add a verified, monitored privacy contact email address. No public business email is confirmed in the repository. -->
+      <p>The working jurisdiction for this policy is India, subject to confirmation by the owner and legal review.</p>
+      <!-- TODO(owner): Confirm the responsible legal entity, mailing address, privacy contact, and applicable jurisdiction before launch. -->
+      <p>We may update this policy as Piko changes. The effective date above will change when a revised version is posted.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot"><span>© 2026 Piko</span><span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="support.html">Support</a></span></div>
+  </footer>
+</body>
+</html>

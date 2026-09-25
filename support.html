@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Help for pairing a device, resetting a Parent PIN, restoring purchases, and deleting a Piko account.">
+  <title>Support | Piko</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --cream: #f6f1e7;
+      --paper: #fffdf8;
+      --ink: #26332d;
+      --muted: #66736a;
+      --line: #e3dccd;
+      --sage: #496a58;
+      --peach: #e6b38b;
+      --serif: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--cream); color: var(--ink); font: 16px/1.72 var(--sans); }
+    a { color: var(--sage); text-underline-offset: .18em; }
+    a:hover { color: #2e4d3c; }
+    .wrap { width: min(100% - 36px, 900px); margin: 0 auto; }
+    header { padding: 28px 0 20px; }
+    .top { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { color: var(--ink); font: 700 25px/1 "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif; letter-spacing: -.04em; text-decoration: none; }
+    .brand span { color: var(--sage); }
+    nav { display: flex; flex-wrap: wrap; gap: 18px; font-size: 14px; }
+    nav a { color: var(--muted); text-decoration: none; }
+    .hero { padding: 46px 0 28px; }
+    .eyebrow { color: var(--sage); font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    h1, h2 { font-family: var(--serif); font-weight: 500; letter-spacing: -.025em; line-height: 1.2; }
+    h1 { max-width: 720px; margin: 12px 0 15px; font-size: clamp(42px, 8vw, 66px); }
+    h2 { margin: 0 0 12px; font-size: clamp(25px, 4vw, 32px); }
+    .lede { max-width: 660px; color: var(--muted); font-size: 18px; }
+    main { padding-bottom: 52px; }
+    section { margin: 18px 0; padding: clamp(23px, 5vw, 38px); background: var(--paper); border: 1px solid var(--line); border-radius: 22px; box-shadow: 0 8px 28px rgb(69 56 35 / 4%); }
+    details { padding: 16px 0; border-top: 1px solid var(--line); }
+    details:first-of-type { border-top: 0; }
+    summary { color: var(--ink); cursor: pointer; font: 500 21px/1.35 var(--serif); }
+    details p { margin: 12px 0 0; }
+    .callout { padding: 16px 18px; background: #f4eadb; border-left: 3px solid var(--peach); border-radius: 8px; }
+    footer { padding: 22px 0 38px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+    footer .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px; }
+    @media (max-width: 600px) { .top { align-items: flex-start; flex-direction: column; } nav { gap: 14px; } .hero { padding-top: 34px; } }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <div class="top">
+      <a class="brand" href="index.html" aria-label="Piko home">piko<span>•</span></a>
+      <nav aria-label="Main navigation">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html" aria-current="page">Support</a>
+      </nav>
+    </div>
+    <div class="hero">
+      <div class="eyebrow">A hand for parents</div>
+      <h1>We’re here to help.</h1>
+      <p class="lede">Quick answers for setting up a child’s device, managing your Parent PIN, restoring a purchase, or closing an account.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h2>Common questions</h2>
+      <details>
+        <summary>How do I pair a child’s device?</summary>
+        <p>On the parent device, open Parent Zone → Family, choose the child profile, and create a pairing code. On the child’s device, choose the option to enter a code and type the six digits. The code works once and expires after ten minutes. If it has expired or was already used, create a new one. Keep the code within your family.</p>
+      </details>
+      <details>
+        <summary>How do I reset a forgotten Parent PIN?</summary>
+        <p>Open Parent Zone → Account → Parent PIN → Reset with your account. Sign in again, then choose a new PIN. To change a PIN you still know, choose Change parent PIN and enter the current PIN first.</p>
+      </details>
+      <details>
+        <summary>How do I restore a subscription?</summary>
+        <p>Sign in to the Piko parent account that owns the family plan. Open Parent Zone → Subscription → Restore purchases while online. If access still does not appear, check that the Apple account used for the purchase is active and contact support through Parent Zone → Feedback and safety report.</p>
+      </details>
+      <details id="delete-account">
+        <summary>How do I delete my account?</summary>
+        <p>Open Parent Zone → Privacy Center → Export and delete → Delete my parent account. Confirm the signed-in parent email, then enter the Parent PIN. The request permanently removes the parent account, child profiles, and saved content, then signs you out. Deletion cannot be undone.</p>
+        <p>Deleting your Piko account does not cancel an Apple subscription. Cancel separately in your Apple account’s subscription settings to prevent renewal. For individual child-profile deletion, choose Delete a child profile from the same Export and delete screen.</p>
+        <p>Read more in the <a href="privacy.html#delete-account">Privacy Policy</a>.</p>
+      </details>
+      <details>
+        <summary>How do I contact Piko?</summary>
+        <p>In the app, open Parent Zone → Feedback and safety report. Choose General feedback for a question or suggestion, Bug for a technical issue, or Safety concern to report something that worried you. Safety concerns go to the safety team first. For account or privacy requests, use Parent Zone → Privacy Center.</p>
+        <p>Please do not post a child’s name, private conversation, or other sensitive information in a public review or public forum.</p>
+        <!-- TODO(owner): Add a verified, monitored support email address once the owner supplies one. -->
+      </details>
+    </section>
+
+    <section>
+      <h2>Privacy and terms</h2>
+      <p>Read the <a href="privacy.html">Privacy Policy</a> to learn what information Piko handles and how to request an export or deletion. The <a href="terms.html">Terms</a> cover family profiles, subscriptions, and Boost purchases.</p>
+      <p class="callout">For your family’s safety, share pairing codes only with the child who is joining your account. Piko codes expire after ten minutes and can be used once.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot"><span>© 2026 Piko</span><span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="support.html">Support</a></span></div>
+  </footer>
+</body>
+</html>
